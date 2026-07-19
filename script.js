@@ -495,8 +495,22 @@ document.addEventListener('DOMContentLoaded', () => {
     btnNext.textContent = 'Submitting...';
     btnPrev.style.display = 'none';
     
-    // Simulate server POST request
-    setTimeout(() => {
+    // Create FormData object
+    const formData = new FormData(bookingForm);
+    
+    // Send form data asynchronously to FormSubmit.co
+    // Change 'hello@lumera.lu' to your actual email address
+    fetch('https://formsubmit.co/ajax/hello@lumera.lu', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error('Network response was not ok.');
+    })
+    .then(data => {
       // Move to step 4 (Success Card)
       currentStep = 4;
       showStep(currentStep);
@@ -504,7 +518,14 @@ document.addEventListener('DOMContentLoaded', () => {
       // Reset form variables
       bookingForm.reset();
       pickerCards.forEach(c => c.classList.remove('selected'));
-    }, 1500);
+    })
+    .catch(error => {
+      console.error('Error submitting form:', error);
+      alert('There was a problem submitting your inquiry. Please try again or email us directly at hello@lumera.lu.');
+      btnNext.disabled = false;
+      btnNext.textContent = 'Submit Inquiry';
+      btnPrev.style.display = 'block';
+    });
   };
   
   // Adjust header look on scroll
