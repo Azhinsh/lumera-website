@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lumera Studio is an elite Luxembourg creative production house specializing in cinema and photography for weddings, corporate events, and editorial photoshoots.">
+  <title>Lumera Studio | Cinema & Photography Bookings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Custom Cursor & Followers -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"><span>View</span></div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="navbar">
+      <a href="#hero" class="logo-container">
+        <img src="logo/Horizontal transparent.svg" alt="Lumera Studio Logo" class="logo-img">
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#portfolio" class="nav-link">Exhibition</a></li>
+          <li><a href="#services" class="nav-link">Packages</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#booking" class="nav-link" style="color: var(--accent-primary);">Book Session</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Split Screen) -->
+  <section id="hero" class="hero">
+    <div class="hero-grid">
+      
+      <!-- Text Description Column -->
+      <div class="hero-text-column reveal">
+        <span class="hero-tagline">Cinematography & Photography</span>
+        <h1 class="hero-title">Capture the beauty of your <em>milestones</em>.</h1>
+        <p class="hero-description">We combine high-end cinema production and emotional, fine-art photography to document weddings, corporate events, and portraits across Europe.</p>
+        <a href="#booking" class="cta-button">
+          <span>Book a Session</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Video Column with Studio Frame -->
+      <div class="hero-video-column reveal delay-1">
+        <div class="hero-video-frame-border"></div>
+        <div class="hero-background">
+          <div id="hero-video"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Portfolio Section (Asymmetric Editorial Grid) -->
+  <section id="portfolio">
+    <div class="section-header reveal">
+      <span class="section-tag">Exhibition</span>
+      <h2 class="section-title">Selected Stills</h2>
+    </div>
+
+    <!-- Category Filter Buttons -->
+    <div class="filter-container reveal delay-1">
+      <button class="filter-btn active" data-filter="all">All Works</button>
+      <button class="filter-btn" data-filter="weddings">Weddings</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+      <button class="filter-btn" data-filter="portraits">Portraits</button>
+    </div>
+
+    <!-- Gallery Grid (Dynamically Populated as Asymmetric Cards) -->
+    <div class="gallery-grid">
+      <!-- Artworks will be injected here by Javascript -->
+    </div>
+  </section>
+
+  <!-- Services / Packages Section -->
+  <section id="services">
+    <div class="section-header reveal">
+      <span class="section-tag">Pricing</span>
+      <h2 class="section-title">Service Packages</h2>
+    </div>
+
+    <div class="packages-grid">
+      
+      <!-- Package 1: Portraits -->
+      <div class="package-card reveal">
+        <div class="package-header">
+          <span class="package-type">Photoshoot</span>
+          <h3 class="package-title">Editorial Session</h3>
+          <div class="package-price">€600 <span>/ session</span></div>
+        </div>
+        <ul class="package-features">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Up to 3 hours shooting
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            50 retouched high-res photos
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Luxembourg location guide
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Online download gallery
+          </li>
+        </ul>
+        <a href="#booking" class="package-btn select-package" data-package="portrait">Select Package</a>
+      </div>
+
+      <!-- Package 2: Weddings (Featured) -->
+      <div class="package-card featured reveal delay-1">
+        <span class="featured-badge">Most Popular</span>
+        <div class="package-header">
+          <span class="package-type">Wedding Cinema & Photo</span>
+          <h3 class="package-title">Wedding Cinematic</h3>
+          <div class="package-price">€2,400 <span>/ full day</span></div>
+        </div>
+        <ul class="package-features">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Full day coverage (12 hours)
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            10-minute cinema film
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            500 retouched digital photos
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Lead shooter + assistant DPs
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Raw footage delivered on USB
+          </li>
+        </ul>
+        <a href="#booking" class="package-btn select-package" data-package="wedding">Select Package</a>
+      </div>
+
+      <!-- Package 3: Events -->
+      <div class="package-card reveal delay-2">
+        <div class="package-header">
+          <span class="package-type">Events Coverage</span>
+          <h3 class="package-title">Corporate & Gala</h3>
+          <div class="package-price">€1,200 <span>/ up to 5h</span></div>
+        </div>
+        <ul class="package-features">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Up to 5 hours coverage
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            200 retouched event photos
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            3-minute event recap reel
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Same-week delivery portal
+          </li>
+        </ul>
+        <a href="#booking" class="package-btn select-package" data-package="event">Select Package</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Booking Form Section -->
+  <section id="booking">
+    <div class="section-header reveal" style="align-items: center; text-align: center; margin-bottom: 40px;">
+      <span class="section-tag">Booking Desk</span>
+      <h2 class="section-title">Schedule a shoot</h2>
+    </div>
+
+    <div class="booking-container reveal delay-1">
+      
+      <!-- Progress Indicator Line -->
+      <div class="steps-indicator">
+        <div class="indicator-line-progress" id="progress-line"></div>
+        <div class="step-dot active" data-step="1">1 <span class="label">Service</span></div>
+        <div class="step-dot" data-step="2">2 <span class="label">Date & Details</span></div>
+        <div class="step-dot" data-step="3">3 <span class="label">Contact Info</span></div>
+      </div>
+
+      <!-- Booking Form -->
+      <form id="booking-form">
+        
+        <!-- STEP 1: Select Service -->
+        <div class="form-step active" data-step="1">
+          <h3 class="step-title">Select your Service Package</h3>
+          <p class="step-desc">Choose the experience that fits your milestones.</p>
+          <div class="services-picker">
+            
+            <label class="picker-card" for="srv-wedding">
+              <input type="radio" id="srv-wedding" name="service_package" value="wedding">
+              <div class="icon">💍</div>
+              <h4>Wedding Cinematic</h4>
+              <p>Full-day coverage, cinematic films, fine-art photographs.</p>
+            </label>
+            
+            <label class="picker-card" for="srv-event">
+              <input type="radio" id="srv-event" name="service_package" value="event">
+              <div class="icon">💼</div>
+              <h4>Corporate & Gala</h4>
+              <p>Galas, recaps, corporate social networking events.</p>
+            </label>
+            
+            <label class="picker-card" for="srv-portrait">
+              <input type="radio" id="srv-portrait" name="service_package" value="portrait">
+              <div class="icon">📷</div>
+              <h4>Editorial Session</h4>
+              <p>Portraitures, anniversaries, outdoor landscape shoots.</p>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- STEP 2: Date & Event Details -->
+        <div class="form-step" data-step="2">
+          <h3 class="step-title">Date & Event Details</h3>
+          <p class="step-desc">Provide estimated timelines and event specs.</p>
+          <div class="inputs-grid">
+            
+            <div class="form-group-flat">
+              <input type="date" id="event-date" name="event_date" class="input-flat" required>
+              <label for="event-date" class="label-flat">Event Date</label>
+            </div>
+            
+            <div class="form-group-flat">
+              <input type="text" id="event-location" name="event_location" class="input-flat" placeholder=" " required>
+              <label for="event-location" class="label-flat">Event Location (City/Venue)</label>
+            </div>
+
+          </div>
+          <div class="inputs-grid">
+            
+            <div class="form-group-flat">
+              <input type="number" id="event-guests" name="event_guests" class="input-flat" placeholder=" " min="1">
+              <label for="event-guests" class="label-flat">Estimated Guest Count (Optional)</label>
+            </div>
+            
+            <div class="form-group-flat">
+              <input type="text" id="event-hours" name="event_hours" class="input-flat" placeholder=" " required>
+              <label for="event-hours" class="label-flat">Desired Coverage Hours (e.g. 5 hours, Full Day)</label>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- STEP 3: Client Details -->
+        <div class="form-step" data-step="3">
+          <h3 class="step-title">Contact Information</h3>
+          <p class="step-desc">Who should our producers follow up with?</p>
+          <div class="inputs-grid">
+            
+            <div class="form-group-flat">
+              <input type="text" id="client-name" name="client_name" class="input-flat" placeholder=" " required>
+              <label for="client-name" class="label-flat">Full Name</label>
+            </div>
+            
+            <div class="form-group-flat">
+              <input type="email" id="client-email" name="client_email" class="input-flat" placeholder=" " required>
+              <label for="client-email" class="label-flat">Email Address</label>
+            </div>
+
+          </div>
+          <div class="inputs-grid">
+            
+            <div class="form-group-flat">
+              <input type="tel" id="client-phone" name="client_phone" class="input-flat" placeholder=" " required>
+              <label for="client-phone" class="label-flat">Phone Number</label>
+            </div>
+            
+            <div class="form-group-flat">
+              <input type="text" id="client-notes" name="client_notes" class="input-flat" placeholder=" ">
+              <label for="client-notes" class="label-flat">Special Requests / Campaign Notes</label>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- STEP 4: Success card -->
+        <div class="form-step" data-step="4">
+          <div class="success-card">
+            <div class="success-icon">✓</div>
+            <h3>Inquiry Submitted!</h3>
+            <p>Thank you for reaching out to Lumera Studio. Our event producer will review your details and email you a custom booking proposal within 24 hours.</p>
+          </div>
+        </div>
+
+        <!-- Form Navigation -->
+        <div class="form-nav-buttons" id="form-navigation-row">
+          <button type="button" class="form-btn form-btn-prev" id="btn-prev" style="display: none;">
+            ← Back
+          </button>
+          <button type="button" class="form-btn form-btn-next" id="btn-next">
+            Next →
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- About Section (Brutalist Three-Column Info + Banner) -->
+  <section id="about">
+    <div class="section-header reveal">
+      <span class="section-tag">The Team</span>
+      <h2 class="section-title">About Lumera</h2>
+    </div>
+
+    <div class="about-grid reveal delay-1">
+      
+      <!-- Studio Identity Column -->
+      <div class="about-column">
+        <h3><span>01.</span> Studio Profile</h3>
+        <p class="about-text">
+          Lumera Studio is an elite creative visual production house working at the intersection of wedding cinema and fine-art events photography. Based in Luxembourg and collaborating globally, we partner with couples and corporate hosts to construct striking visual memories.
+        </p>
+        <p class="about-text" style="margin-top: 16px;">
+          Our core philosophy is simple: we don't just record events; we document their soul. We bring cinematic lighting, framing, and emotional weights to every frame we capture.
+        </p>
+      </div>
+
+      <!-- Capabilities Column -->
+      <div class="about-column">
+        <h3><span>02.</span> Core Services</h3>
+        <ul class="capabilities-list">
+          <li>Wedding Cinematic Short Films</li>
+          <li>Corporate Galas & Networking Coverage</li>
+          <li>Fine Art Anniversary Portrait Sessions</li>
+          <li>Full pre-shoot creative art direction</li>
+          <li>Professional editing & color grading</li>
+          <li>Widescreen drone shots (Licenced operators)</li>
+        </ul>
+      </div>
+
+      <!-- Stats & Locations Column -->
+      <div class="about-column">
+        <h3><span>03.</span> Operations & Stats</h3>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num">120+</span>
+            <span class="stat-label">Milestones Filmed</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">15+</span>
+            <span class="stat-label">Industry Awards</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">LUX</span>
+            <span class="stat-label">Headquarters (L-1337)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Widescreen banner -->
+    <div class="about-image-wrapper reveal delay-2">
+      <img src="images/profile_photographer.jpg" alt="Lumera Studio crew operating professional cinema gear">
+    </div>
+  </section>
+
+  <!-- Contact Section (Office and coordinates) -->
+  <section id="contact">
+    <div class="contact-grid">
+      
+      <!-- Text Intro and Links -->
+      <div class="contact-text-column reveal">
+        <div class="contact-intro">
+          <span class="section-tag">Booking Office</span>
+          <h3>Let's capture your milestones.</h3>
+          <p>Drop by our Luxembourg booking office for a coffee and discuss package customisations, or schedule a detailed consultation call with our directors.</p>
+        </div>
+
+        <ul class="contact-details-list">
+          <li class="contact-detail-item">
+            <h4>Acquisition Desk Email</h4>
+            <a href="mailto:hello@lumera.lu">hello@lumera.lu</a>
+          </li>
+          <li class="contact-detail-item">
+            <h4>Luxembourg Office Address</h4>
+            <a href="https://www.google.com/maps/search/?api=1&query=18A%2F18D%2C+rue+de+la+Cimenterie%2C+L-1337+Luxembourg" target="_blank" rel="noopener">
+              18A/18D, rue de la Cimenterie<br>L-1337 Luxembourg
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Map placeholder / graphic detail -->
+      <div class="contact-form-wrapper reveal delay-1" style="border: 1px solid var(--border-color); border-radius: var(--border-radius-lg); overflow: hidden; background: var(--bg-secondary); padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+        <span class="section-tag" style="margin-bottom: 8px;">Studio Hours</span>
+        <h4 style="font-size: 14px; margin-bottom: 24px; font-weight: 700; color: var(--text-primary);">Mon - Sat: 09:00 - 19:00</h4>
+        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.7; font-weight: 300;">
+          All meetings and studio sessions are by appointment only to respect the creative schedules of our shooting teams.
+        </p>
+        <p style="font-size: 14px; color: var(--text-secondary); line-height: 1.7; font-weight: 300; margin-top: 16px;">
+          For emergency last-minute event bookings, please call our direct studio producers or submit the interactive booking desk form.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <a href="#hero" class="logo-container">
+        <img src="logo/Horizontal transparent.svg" alt="Lumera Studio Logo" class="footer-logo">
+      </a>
+      <ul class="social-links">
+        <li><a href="#" class="social-link" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="#" class="social-link" target="_blank" rel="noopener">Vimeo</a></li>
+        <li><a href="#" class="social-link" target="_blank" rel="noopener">Behance</a></li>
+        <li><a href="#" class="social-link" target="_blank" rel="noopener">Twitter</a></li>
+      </ul>
+      <p class="copyright">&copy; 2026 Lumera Studio. All Rights Reserved. Crafted with care.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <div class="lightbox-container">
+      <div class="lightbox-img-wrapper">
+        <img class="lightbox-img" src="" alt="">
+      </div>
+      <div class="lightbox-details">
+        <h3 class="lightbox-title">Project Title</h3>
+        <ul class="lightbox-meta">
+          <li><strong>Discipline:</strong> <span id="lightbox-medium">Cinematography</span></li>
+          <li><strong>Release Year:</strong> <span id="lightbox-year">2026</span></li>
+          <li><strong>Format:</strong> <span id="lightbox-dimensions">Anamorphic / 4K</span></li>
+        </ul>
+        <p class="lightbox-desc">
+          Description of the project.
+        </p>
+        <div class="lightbox-nav">
+          <button class="lightbox-btn" id="prev-btn" aria-label="Previous Project">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <button class="lightbox-btn" id="next-btn" aria-label="Next Project">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+</html>
